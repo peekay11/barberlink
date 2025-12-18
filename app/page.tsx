@@ -14,6 +14,7 @@ interface Shop {
   address: string
   manager_name: string
   image_urls: string[]
+  services?: string[]
   is_verified: boolean
   is_featured: boolean
   view_count: number
