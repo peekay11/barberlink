@@ -54,9 +54,9 @@ export default function ShopCard({ shop, onShopClick }: ShopCardProps) {
           <div className="flex items-start justify-between mb-1">
             <h3 className="font-semibold text-sm text-gray-900 line-clamp-1 pr-1">{shop.shop_name}</h3>
             <div className="flex items-center space-x-1">
-              <Star size={12} className={`${shop.avg_rating > 0 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
+              <Star size={12} className={`${(shop.avg_rating || 0) > 0 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
               <span className="text-xs font-medium">
-                {shop.avg_rating > 0 ? shop.avg_rating.toFixed(1) : '0.0'}
+                {(shop.avg_rating || 0) > 0 ? (shop.avg_rating || 0).toFixed(1) : '0.0'}
               </span>
             </div>
           </div>
