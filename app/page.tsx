@@ -316,7 +316,7 @@ export default function Home() {
                     setSortBy(e.target.value)
                     setCurrentPage(1)
                   }}
-                  className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-barber-orange">
+                  className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-barber-orange"
                 >
                   <option value="newest">Newest First</option>
                   <option value="rating">Highest Rated</option>
