@@ -169,10 +169,18 @@ export default function Home() {
   
   const handleShopClick = async (shopId: string) => {
     // Increment view count
-    await supabase
+    const { data: shop } = await supabase
       .from('shops')
-      .update({ view_count: supabase.sql`view_count + 1` })
+      .select('view_count')
       .eq('id', shopId)
+      .single()
+    
+    if (shop) {
+      await supabase
+        .from('shops')
+        .update({ view_count: (shop.view_count || 0) + 1 })
+        .eq('id', shopId)
+    }
   }
 
   return (
