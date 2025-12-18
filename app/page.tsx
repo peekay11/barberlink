@@ -92,7 +92,7 @@ export default function Home() {
       // Apply service filter client-side for better partial matching
       if (searchService) {
         shopsWithRatings = shopsWithRatings.filter(shop => 
-          shop.services?.some(service => 
+          shop.services?.some((service: string) => 
             service.toLowerCase().includes(searchService.toLowerCase())
           )
         )
