@@ -38,8 +38,10 @@ logs/
 *.tmp
 *.temp
 
-# SQL files with fake data
+# SQL files
 fake-data*.sql
-supabase-schema.sql
+supabase-schema*.sql
 supabase-simple.sql
+supabase-final.sql
 verification-schema.sql
+*.sql
