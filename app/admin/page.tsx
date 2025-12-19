@@ -42,7 +42,7 @@ export default function AdminPage() {
       setUser(user)
       
       // Check if user is admin (you can change this email)
-      const adminEmails = ['admin@barberlink.com', 'your-email@gmail.com']
+      const adminEmails = ['pasekamabitsela22@gmail.com', 'your-email@gmail.com']
       const userIsAdmin = adminEmails.includes(user.email || '')
       
       setIsAdmin(userIsAdmin)
